@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        include partials/styles.pug
+        link(rel="stylesheet", href="/css/auth.css")
+        title Sign up
+    body 
+        div(class="background") 
+            h1(class="heading") Criss Cross 
+            div(class="main-container")
+                div(class="criss-cross-vector")
+                form(class="login-form" action="/user/register" method="POST")
+                    h2(class="form-heading") Login
+                    div(class="form-input")
+                        label(for="username") username
+                        input(type="text" id="username" name="username")
+                    div(class="form-input")
+                        label(for="email") email
+                        input(type="email" id="email" name="email")
+                    div(class="form-input")
+                        label(for="password") password
+                        input(type="password" id="password" name="password")
+                    div(class="form-input")
+                        label(for="password2") confirm password
+                        input(type="password2" id="password2" name="password2")
+                    button(type="submit" class="submit-btn") Submit  
+
+                    p(class="link-container") Already have an account?
+                        a(href="/user/login") Log In
+
+        include partials/footer.pug
+
+        //-testing
+        div(class="container small-container my-4")
+            //- h1(class="text-center") login
+            each success in successes
+                div(class="alert alert-success alert-dismissible fade show" role="alert")
+                    p=success
+                    button(type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close")
+            each error in errors
+                div(class="alert alert-warning alert-dismissible fade show" role="alert")
+                    p=error
+                    button(type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close")
+
+        script(src="/scripts/login.js") 

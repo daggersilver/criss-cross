@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --grid-size: 500px;
+    --grid-gap: 5px;
+}
+
+#game-grid {
+    display: grid;
+    width: var(--grid-size);
+    height: var(--grid-size);
+    background-color: black;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    outline: calc( var(--grid-gap) / 2 ) solid black;
+}
+
+.grid-tiles {
+    background-color: white;
+    width: calc( var(--grid-size) / 3 - var(--grid-gap) ); 
+    height: calc( var(--grid-size) / 3 - var(--grid-gap) ); 
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
+
+#main-container {
+    display: flex;
+}
+
+#game-details {
+    flex-grow: 1;
+    background-color: beige;
+    margin-left: 15px;
+    display:  flex;
+    flex-direction: column;
+}
+
+#message-box {
+    width: 70%;
+    height: 5em;
+    border: 0.4em solid gray;
+    margin: 1em auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#result-box {
+    width: 70%;
+    margin: 1em auto;
+    font-family: monospace;
+    display: none;
+}
+
+#result-box #return-home {
+    padding: 0.5em 1em;
+    background-color: blue;
+    color: white;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+#time-left-bar {
+    width: 70%;
+    margin: 0.5em auto;
+    height: 1em;
+    background-color: gainsboro;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#time-left-bar-inner {
+    width: 1px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #00ff04;
+}

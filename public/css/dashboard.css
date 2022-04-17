@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: 5em;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+span.title {
+    font-size: 2em;
+    color: rgb(231, 225, 225);
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+a.logout_btn {
+    background-color: blue;
+    border-radius: 5px;
+    padding: 0.2em 1em;
+    color: white;
+    position: absolute;
+    right: 3em;
+}
+
+#main-container {
+    display: flex;
+}
+
+#player-details {
+    width: 70%;
+    border-right: 2px solid rgba(0, 0, 0, 0.664);
+}
+
+#player-controls {
+    width: 30%;
+    background-color: rgba(113, 113, 240, 0.123);
+    padding: 3em;
+}
+
+#player-controls button {
+    background-color: whitesmoke;
+    border: 3px solid blue;
+    padding: 0.3em 1.5em;
+    color: rgb(16, 16, 145);
+    transition: color 0.3s, background-color 0.3s;
+}
+
+#player-controls button:hover {
+    background-color: blue;
+    color: white;
+}
+
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    font-size: 6em;
+    color: whitesmoke;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em 1em;
+}
+
+#text-details {
+    font-family: monospace;
+    font-size: 1.4em;
+    padding-left: 2em;
+    color: rgb(77, 74, 74);
+    position: relative;
+}
+
+#text-details span {
+    color: black;
+    position: absolute;
+    left: 50%;
+}
+
+#waiting-screen {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.726);
+    display: none;
+}
+
+#waiting-screen #spinner {
+    width: 100px;
+    height: 100px;
+    background-image: url("/assets/spinner.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: spinner 1s ease-out infinite;
+    margin: 40vh auto 2em auto;
+}
+
+#waiting-screen p {
+    text-align: center;
+    font-family: monospace;
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(70, 67, 67);
+}
+
+#cancel-game {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2em;
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

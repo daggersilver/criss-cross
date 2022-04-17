@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="20"
+   height="20"
+   viewBox="0 0 5.2916668 5.2916665"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (76b9e6a115, 2022-02-25)"
+   sodipodi:docname="star3.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     width="20px"
+     inkscape:zoom="19.754548"
+     inkscape:cx="18.603311"
+     inkscape:cy="9.2890004"
+     inkscape:window-width="1294"
+     inkscape:window-height="704"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:#00ff00"
+       id="path65"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="10.287846"
+       sodipodi:cy="7.9773588"
+       sodipodi:r1="2.1269293"
+       sodipodi:r2="0.87251741"
+       sodipodi:arg1="0.97393844"
+       sodipodi:arg2="1.5461123"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 11.483279,9.7365542 10.309381,8.8496104 8.9841605,9.6579044 9.4649397,8.2673804 8.286691,7.2567977 9.7577268,7.2843504 10.354749,5.851482 10.78312,7.2590345 12.330349,7.3840558 11.124061,8.2264183 Z"
+       transform="matrix(1.1751127,0,0,1.1751127,-9.494862,-6.5060597)"
+       inkscape:transform-center-x="0.027744098"
+       inkscape:transform-center-y="-0.18531679" />
+  </g>
+</svg>

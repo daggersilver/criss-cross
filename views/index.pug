@@ -1,0 +1,52 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        include partials/styles.pug
+        link(rel="stylesheet", href="/css/dashboard.css")
+        title Dashboard 
+        script(src="/scripts/socket.io.js" defer) 
+        script(src="/scripts/index.js" defer) 
+    body 
+        nav 
+            span.title CRISS CROSS 
+            a.logout_btn(href="/user/logout" id="logout-button") logout 
+
+        - const details = JSON.parse(user_details)
+
+        div(id="main-container")
+            div(id="player-details")
+                div(id="profile-pic" style={background: details.profile_color})=details.username[0].toUpperCase()
+                div(id="text-details")
+                    p username: 
+                        span=details.username
+                    p total score: 
+                        span=details.score 
+                    p total matches won: 
+                        span=details.total_matches_won 
+                    p total matches played: 
+                        span=details.total_matches_played
+                    p date joined:     
+                        span=date_joined
+            div(id="player-controls")
+                button(id="play-btn") Play Now
+
+        div(id="waiting-screen")
+            div(id="spinner")
+            p please wait while we find another player 
+            p This might take a few minutes
+            a(href="/" id="cancel-game") Cancel
+        //- div(class="container my-5")
+        //-     //- h1 protected site !!
+        //-     //- button(class="btn btn-primary" id="play-btn") play now
+        //-     //- each success in successes
+        //-     //-     div(class="alert alert-success alert-dismissible fade show" role="alert")
+        //-     //-         p=success
+        //-     //-         button(type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close")
+        //-     //- each error in errors
+        //-     //-     div(class="alert alert-warning alert-dismissible fade show" role="alert")
+        //-     //-         p=error
+        //-     //-         button(type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close")
+        //-     a(href="/user/logout" class="btn btn-primary my-3") Logout
