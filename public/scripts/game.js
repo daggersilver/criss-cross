@@ -105,12 +105,12 @@ socket.on("connect", () => {
         }
 
         if(gameData.current_player == socket.id) {
-            messageBox.innerText = "You Won !!";
+            messageBox.innerText = "You Won 😁!!";
             showResults(you, WIN_SCORE, other, LOST_SCORE);
             gameFinished(socket, you, WIN_SCORE, gameData.gameId);
         }
         else {
-            messageBox.innerText = socket.id + " Won !!";
+            messageBox.innerText = "You lost 😟!!";
             showResults(you, LOST_SCORE, other, WIN_SCORE);
             gameFinished(socket, you, LOST_SCORE, gameData.gameId);
         }

@@ -75,7 +75,7 @@ a.logout_btn {
     position: relative;
 }
 
-#text-details span {
+#text-details span.right {
     color: black;
     position: absolute;
     left: 50%;
@@ -127,5 +127,62 @@ a.logout_btn {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #main-container {
+        flex-direction: column;
+    }
+
+    #player-details, #player-controls {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #text-details {
+        font-size: 1.2em;
+        /* padding-left: 2em; */
+    }
+
+    #text-details span.label {
+        width: 50%;
+        display: inline-block;
+    }
+
+    #text-details span.right {
+        left: 60%;
+    }
+
+    #profile-pic {
+        width: 120px;
+        height: 120px;
+        font-size: 5.8em;
+        color: whitesmoke;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5em 1em;
+    }
+
+    a.logout_btn {
+        right: 1em;
+        top: 150%;        
+    }
+
+    span.title {
+        font-size: 1.5em;
+    }
+
+    nav {
+        height: 4em;
+    }
+
+    #waiting-screen #spinner {
+        width: 70px;
+        height: 70px;
+        margin: 30vh auto 2em auto;
     }
 }

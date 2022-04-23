@@ -82,3 +82,46 @@
     border-radius: 10px;
     background-color: #00ff04;
 }
+
+@media screen and (max-width: 990px) {
+    #main-container {
+        flex-direction: column;
+    }
+
+    #game-grid {
+        margin: 1em auto;
+    }
+
+    :root {
+        --grid-size: 400px;
+    }
+
+    #message-box {
+        height: 3.5em;
+        border: 0.3em solid gray;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    :root {
+        --grid-size: 350px;
+    }
+} 
+
+@media screen and (max-width: 380px) {
+    :root {
+        --grid-size: 300px;
+    }
+} 
+
+@media screen and (max-width: 320px) {
+    :root {
+        --grid-size: 270px;
+    }
+} 
+
+@media screen and (max-width: 90px) {
+    :root {
+        --grid-size: 300px;
+    }
+}

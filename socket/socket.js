@@ -115,6 +115,10 @@ function socketLogic(httpServer) {
         socket.on("game-finished", (scoreDetails) => {
             User.findOne({username: scoreDetails.username})
             .then((user) => {
+                if(user == null) {
+                    return;
+                }
+
                 if(user.last_game == scoreDetails.gameId) return;
 
                 user.score += scoreDetails.score;

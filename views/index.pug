@@ -20,16 +20,21 @@ html(lang="en")
             div(id="player-details")
                 div(id="profile-pic" style={background: details.profile_color})=details.username[0].toUpperCase()
                 div(id="text-details")
-                    p username: 
-                        span=details.username
-                    p total score: 
-                        span=details.score 
-                    p total matches won: 
-                        span=details.total_matches_won 
-                    p total matches played: 
-                        span=details.total_matches_played
-                    p date joined:     
-                        span=date_joined
+                    p 
+                        span.label username: 
+                        span.right=details.username
+                    p 
+                        span.label total score: 
+                        span.right=details.score 
+                    p 
+                        span.label total matches won: 
+                        span.right=details.total_matches_won 
+                    p 
+                        span.label total matches played: 
+                        span.right=details.total_matches_played
+                    p 
+                        span.label date joined:     
+                        span.right=date_joined
             div(id="player-controls")
                 button(id="play-btn") Play Now
 
